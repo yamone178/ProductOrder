@@ -1,7 +1,7 @@
 import React, { useMemo, useState } from 'react'
 import TopNav from '../../components/TopNav'
 import OrderSummary from '../../components/OrderSummary'
-import InputBox from '../../components/inputBox'
+import InputBox from '../../components/InputBox'
 import RadioBox from '../../components/RadioBox'
 
 const CheckOut = () => {
