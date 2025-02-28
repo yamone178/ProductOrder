@@ -11,15 +11,7 @@ module.exports = {
         },
       },
       extend: {
-        keyframes: {
-          fadeIn: {
-            '0%': { opacity: 0 },
-            '100%': { transf },
-          },
-        },
-        animation: {
-          'fade-in': 'fadeIn 0.5s ease-in-out',
-        },
+       
         fontFamily:{
           sans: ["Poppins", "sans-serif"],  
           },
