@@ -28,7 +28,7 @@ const Cart = () => {
               </div>
 
               :
-              <h2>No cart Item</h2>
+              <h2 className='p-3 py-5 mt-4 text-2xl font-semibold text-center bg-gray-100 text-red'>! No cart Item</h2>
 
           }
  

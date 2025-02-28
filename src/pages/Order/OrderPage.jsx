@@ -23,7 +23,7 @@ const OrderPage = () => {
 
   return (
     <div className="relative">
-       <div className="gradient-box top-[30%] right-0"></div>
+       <div className="gradient-box top-[30%] hidden lg:block right-0"></div>
       
       <TopNav />
       <ProductSection  product={product}/>

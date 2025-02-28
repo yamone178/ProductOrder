@@ -19,14 +19,14 @@ const OrderSummary = ({name, route, formData}) => {
 
   return (
     
-    <div className=" h-min w-full p-[30px] bg-white border border-border_light rounded md:w-80 lg:w-[380px]">
+    <div className=" animate__animated animate__zoomIn h-min w-full p-[30px] bg-white border border-border_light rounded md:w-80 lg:w-[380px]">
         <div className="">
         <h3 className="mb-4 text-xl font-semibold">Order Summary</h3>
 
 <div className="space-y-6 text-sm my-[30px]">
   <div className="flex justify-between">
     <span>Price</span>
-    <span>{total}</span>
+    <span>${total}</span>
   </div>
 
   <div className="flex justify-between">

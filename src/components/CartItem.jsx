@@ -9,7 +9,7 @@ const CartItem = ({item}) => {
         const {updateQty, removeFromCart} = useCart()
     
   return (
-    <div className=" mt-[30px] flex justify-between  border-b border-b-border_light ">
+    <div className="animate__animated animate__fadeIn mt-[30px] flex justify-between  border-b border-b-border_light md:pb-0 pb-[20px] ">
       <div className="flex ">
         <div className=" w-[160px] p-3 ">
             <img src={item.thumbnails[0]} alt="" className='w-full ' />

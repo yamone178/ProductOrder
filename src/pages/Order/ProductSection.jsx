@@ -27,8 +27,7 @@ const ProductSection = ({product}) => {
     <main className=" body-container md:py-[100px] sm:py-[20px]">
     <div className="relative lg:grid lg:grid-cols-2 lg:gap-x-8 ">
 
-    <div className=''>
-      {/* Product info */}
+    <div className='animate__animated animate__slideInLeft'>
       <div className="mt-10 px-4 sm:px-0 sm:mt-16 lg:mt-0 lg:w-[500px]">
         <h1 className="text-[44px] font-extrabold tracking-tight text-text-primary">{product.title}</h1>
        

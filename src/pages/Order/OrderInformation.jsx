@@ -15,7 +15,7 @@ const OrderInformation = () => {
              <PersonalInfoText label="Order Number" value="008834TVU" />
         </div>
 
-        <div className="flex justify-between mt-8">
+        <div className="flex flex-col justify-between mt-8 space-y-3 md:space-y-0 md:flex-row">
             <PersonalInfoText label="Name" value={personalInfo.name} />
             <PersonalInfoText label="Email Address" value={personalInfo.email} />
             <PersonalInfoText label="Phone Number" value={personalInfo.phone} />

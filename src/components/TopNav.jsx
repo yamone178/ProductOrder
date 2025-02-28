@@ -2,6 +2,7 @@ import React, { useEffect } from 'react'
 import cartImg from '../assets/shopping-cart.png'
 import { useCart } from '../context/CartContext'
 import { NavLink } from 'react-router-dom'
+import cozy from '../assets/Cozy®.png'
 
 const TopNav = () => {
 
@@ -17,7 +18,7 @@ const TopNav = () => {
         <div className="flex items-center justify-between py-6 md:justify-start md:space-x-10">
           <div className="flex justify-start lg:w-0 lg:flex-1">
             <NavLink to="/" className="text-xl font-bold text-text-primary">
-              Cozy®
+              <img src={cozy} alt="" />
             </NavLink>
           </div>
           <nav className="hidden space-x-10 md:flex">

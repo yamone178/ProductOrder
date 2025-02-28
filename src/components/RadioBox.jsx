@@ -1,18 +1,27 @@
-import React from 'react'
-
-const RadioBox = ({checked, handleInputChange, name, value, title}) => {
+const RadioBox = ({ checked, handleInputChange, name, value, title }) => {
   return (
     <label className="flex items-center p-4 border border-gray-200 cursor-pointer">
-    <input
-        type="radio"
-        name={name}
-        value={value}
-        checked={checked}
-        onChange={handleInputChange}
-        className="w-4 h-4 text-green-500 focus:ring-green-500"
-    />
-    <span className="ml-2">{title}</span>
-</label>
+      <div className="relative flex items-center">
+        <input
+          type="radio"
+          name={name}
+          value={value}
+          checked={checked}
+          onChange={handleInputChange}
+          className="sr-only" 
+        />
+        {/* Custom radio button */}
+        <div
+          className={`w-5 h-5 rounded-full border ${
+            checked ? "border-primary" : "border-gray-300"
+          } flex items-center justify-center`}
+        >
+          {/* Green dot that appears when checked */}
+          {checked && <div className="w-3 h-3 rounded-full bg-primary"></div>}
+        </div>
+      </div>
+      <span className="ml-2">{title}</span>
+    </label>
   )
 }
 
