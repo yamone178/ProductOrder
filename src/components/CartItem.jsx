@@ -30,7 +30,7 @@ const CartItem = ({item}) => {
 
       <div>
         <p className='text-xl font-bold'>
-            {item.price * item.quantity}
+            ${item.price * item.quantity}
         </p>
       </div>
        
