@@ -29,8 +29,8 @@ const CheckOut = () => {
     return (
         <div>
             <TopNav />
-            <main className="flex justify-between md:flex-row sm:flex-col sm:gap-[10px]  md:gap-[70px] body-container">
-                <div className=' sm:w-full md:w-[65%]'>
+            <main className="flex justify-between md:flex-row flex-col gap-[10px]  md:gap-[70px] body-container">
+                <div className=' w-full md:w-[65%]'>
                     <form action="" >
                         <div className="mb-6">
                             <h2 className="mb-4 text-lg font-bold">Personal Information</h2>

@@ -12,8 +12,8 @@ const Cart = () => {
   return (
     <div>
       <TopNav />
-      <main className="flex md:flex-row sm:flex-col justify-between sm:gap-[10px]  md:gap-[70px] body-container">
-        <div className="flex-auto md:w-[65%] sm:w-full">
+      <main className="flex md:flex-row flex-col justify-between gap-[10px]  md:gap-[70px] body-container">
+        <div className="flex-auto md:w-[65%] w-full">
           <h2> <span className='font-bold text-[32px] mb-5'>Cart</span> <span className='font-bold  text-light_gray text-[20px] inline-block ml-3'>{cart.length} ITEM{cart.length > 1 ? 'S' : ''}</span></h2>
 
           {

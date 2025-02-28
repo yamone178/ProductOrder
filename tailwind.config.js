@@ -7,7 +7,20 @@ module.exports = {
         center: true,
         padding: "2rem",
         screens: {
-          "2xl": "1400px",
+          'sm': '400px', // Phones (portrait mode)
+          // => @media (min-width: 640px) { ... }
+    
+          'md': '768px', // Tablets
+          // => @media (min-width: 768px) { ... }
+    
+          'lg': '1024px', // Laptops (small screens)
+          // => @media (min-width: 1024px) { ... }
+    
+          'xl': '1280px', // Desktops (medium screens)
+          // => @media (min-width: 1280px) { ... }
+    
+          '2xl': '1536px', // Large desktops or high-resolution displays
+          // => @media (min-width: 1536px) { ... }
         },
       },
       extend: {

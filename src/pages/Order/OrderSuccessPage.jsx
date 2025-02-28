@@ -14,16 +14,16 @@ const OrderSuccessPage = () => {
     return (
         <div>
             <TopNav />
-            <div className=" w-[100%] px-4 py-5 mx-auto max-w-7xl sm:px-6 lg:px-8">
+            <div className=" w-[100%] md:px-4 py-5 mx-auto max-w-7xl px-6 lg:px-8">
                 <SuccessMessage message="Order Created Successfully!" />
 
              
             </div>
 
-            <div className="px-4 py-3 mx-auto max-w-7xl sm:px-6 lg:px-8">
+            <div className="px-4 py-3 mx-auto md:px-6 max-w-7xl lg:px-8">
             <h2 className=' text-[28px] font-bold mb-4'>Order Information</h2>
 
-            <div className="flex md:flex-row sm:flex-col justify-between sm:gap-[10px]  md:gap-[70px]">
+            <div className="flex md:flex-row flex-col justify-between gap-[30px]  md:gap-[70px]">
             <div className="flex-auto sm:w-full md:w-[65%] ">
                     <OrderInformation />
                     
