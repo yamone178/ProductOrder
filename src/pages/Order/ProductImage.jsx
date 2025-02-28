@@ -15,7 +15,7 @@ const ProductImage = ({product}) => {
  
 
   return (
-    <div className="flex flex-col-reverse">
+    <div className="flex flex-col-reverse mt-7 md:mt-0">
     <div className="w-full max-w-2xl mx-auto mt-6 lg:max-w-none">
        <h2 className="mb-3 ">
         <span className=' text-[32px] font-bold'>0{currentImgIndex+1}</span>

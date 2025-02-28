@@ -20,7 +20,7 @@ const OrderSuccessPage = () => {
              
             </div>
 
-            <div className="px-4 py-3 mx-auto md:px-6 max-w-7xl lg:px-8">
+            <div className="px-6 py-3 mx-auto md:px-6 max-w-7xl lg:px-8">
             <h2 className=' text-[28px] font-bold mb-4 animate__animated animate__slideInLeft '>Order Information</h2>
 
             <div className="flex md:flex-row flex-col justify-between gap-[30px]  md:gap-[70px]">
