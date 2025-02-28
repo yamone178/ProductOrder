@@ -1,8 +1,14 @@
 import React, { useState } from 'react'
 
-import { AiOutlineMinus, AiOutlinePlus, AiOutlineStar } from 'react-icons/ai'
+import { AiOutlineHeart, AiOutlineMinus, AiOutlinePlus, AiOutlineStar } from 'react-icons/ai'
 import ProductImage from './ProductImage'
 import { useCart } from '../../context/CartContext'
+import { FaFacebook } from "react-icons/fa";
+import { FaInstagram } from "react-icons/fa";
+import { FaTwitter } from "react-icons/fa";
+import { FaPinterest } from "react-icons/fa";
+import { IoStar } from 'react-icons/io5';
+
 
 const ProductSection = ({product}) => {
 
@@ -18,16 +24,17 @@ const ProductSection = ({product}) => {
   }
 
   return (
-    <main className=" body-container">
-    <div className="lg:grid lg:grid-cols-2 lg:gap-x-8 lg:items-center">
+    <main className=" body-container md:py-[100px] sm:py-[20px]">
+    <div className="relative lg:grid lg:grid-cols-2 lg:gap-x-8 ">
 
+    <div className=''>
       {/* Product info */}
       <div className="mt-10 px-4 sm:px-0 sm:mt-16 lg:mt-0 lg:w-[500px]">
         <h1 className="text-[44px] font-extrabold tracking-tight text-text-primary">{product.title}</h1>
        
        <div className="flex justify-between ">
           <div className="mt-3">
-              <p className="text-2xl font-bold text-text-primary">{product.price}</p>
+              <p className="text-2xl font-bold text-text-primary">${product.price}</p>
        </div>
 
         {/* Reviews */}
@@ -35,19 +42,19 @@ const ProductSection = ({product}) => {
           <div className="flex items-center">
             <div className="flex items-center">
               {[0, 1, 2, 3, 4].map((rating) => (
-                <AiOutlineStar
+                <IoStar
                   key={rating}
-                  className={`${rating < 4 ? "text-yellow-400" : "text-gray-300"} h-5 w-5 flex-shrink-0`}
+                  className={`${rating < 4 ? "text-yellow-400 " : "text-gray-300"} h-5 w-5 flex-shrink-0`}
                   aria-hidden="true"
                 />
               ))}
             </div>
-            <p className="ml-2 text-sm text-text-secondary">4.6/5.0 <span className=' text-light_gray'>({product.review} reviews)</span></p>
+            <p className="ml-2 text-sm text-text-secondary">4.6/5.0 <span className=' text-light_gray'>({product.review})</span></p>
           </div>
         </div>
        </div>
-
-        <div className="mt-6 ">
+              
+       <div className="mt-6 ">
           <p className="text-base font-normal">
            {product.des}
           </p>
@@ -82,24 +89,35 @@ const ProductSection = ({product}) => {
 
             <button 
             onClick={() =>addToCart(product,quantity)}
-            type="submit" className=" btn-primary w-[174px] cursor">
+            type="submit" className=" btn-primary w-[174px]  cursor-pointer">
               Add to cart
             </button>
           </div>
 
-          <div className="flex items-center mt-6 space-x-4">
-            <button className="flex items-center text-sm text-text-secondary hover:text-text-primary">
-              {/* <HeartIcon className="w-5 h-5 mr-1" /> */}
+          <div className="flex items-center mt-3 space-x-4">
+            <p className="flex items-center text-[16px]">
+              Free 3 to 5 day shipping . Tool-free assembly . 30-day trial
+            </p>
+           
+          </div>
+
+        </div>
+        </div>
+       
+        <div className=" sm:relative md:absolute bottom-0 flex items-center justify-between mt-6 space-x-4 lg:w-[500px]">
+            <button className="flex items-center font-semibold text-primary">
+              <AiOutlineHeart className="w-5 h-5 mr-1 " />
               Add to Wishlist
             </button>
-            <button className="flex items-center text-sm text-text-secondary hover:text-text-primary">
-              {/* <ShareIcon className="w-5 h-5 mr-1" /> */}
-              Share
-            </button>
-          </div>
+            <div className="flex items-center w-[136px] justify-between  ">
+                <FaFacebook className='w-[16px] h-[16px] ' />
+                <FaTwitter className='w-[16px] h-[16px] '/>
+                <FaPinterest className='w-[16px] h-[16px] '/>
+                <FaInstagram className='w-[16px] h-[16px] '/> 
+            </div>
         </div>
 
-       
+        
       </div>
 
       {/* Image gallery */}

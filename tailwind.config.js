@@ -11,6 +11,15 @@ module.exports = {
         },
       },
       extend: {
+        keyframes: {
+          fadeIn: {
+            '0%': { opacity: 0 },
+            '100%': { transf },
+          },
+        },
+        animation: {
+          'fade-in': 'fadeIn 0.5s ease-in-out',
+        },
         fontFamily:{
           sans: ["Poppins", "sans-serif"],  
           },
@@ -25,7 +34,8 @@ module.exports = {
             ring: "#93c5fd",
             light_gray: "rgba(0, 0, 0, 0.49)",
             alert_bg: "rgba(58, 163, 159, 0.13)",
-            red: "#E14B4B"
+            red: "#E14B4B",
+          
         },
         
       

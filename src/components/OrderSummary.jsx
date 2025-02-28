@@ -8,6 +8,7 @@ const OrderSummary = ({name, route, formData}) => {
 
     const {cart, total, discount, addPersonalInfo} = useCart()
 
+
     const navigate = useNavigate()
     
     const handleSubmit = () =>{
@@ -50,7 +51,7 @@ const OrderSummary = ({name, route, formData}) => {
     
 <div className="flex justify-between ">
   <span>TOTAL</span>
-  <span className='font-semibold '>${(Number(total.toFixed(2))).toFixed(2)}</span>
+  <span className='font-semibold '>${(Number(total.toFixed(2) - discount)).toFixed(2)}</span>
 
 </div>
 
@@ -59,7 +60,8 @@ const OrderSummary = ({name, route, formData}) => {
   <span className='font-semibold '>01 Feb, 2023</span>
 </div>
 
-<div className="relative mt-4">
+{ name !== 'Save' &&
+  <div className="relative mt-4">
   <input
     type="text"
     placeholder="Coupon Code"
@@ -70,11 +72,11 @@ const OrderSummary = ({name, route, formData}) => {
   <button className="absolute transform -translate-y-1/2 right-2 top-1/2">
     <GoTag className=' w-[19px] h-[19px] text-secondary' />
   </button>
-</div>
+</div>}
 </div>
 
 <button onClick={handleSubmit} className="w-full py-2 mt-4 text-white transition-colors bg-teal-500 rounded hover:bg-teal-600">
-    {name}
+    {name == 'Save' ? 'Save to Gallery' : name == 'Buy' ? 'Buy' : 'Proceed to Checkout'}
 </button>
         </div>
   </div>

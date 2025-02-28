@@ -16,9 +16,9 @@ const TopNav = () => {
       <div className="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
         <div className="flex items-center justify-between py-6 md:justify-start md:space-x-10">
           <div className="flex justify-start lg:w-0 lg:flex-1">
-            <a href="#" className="text-xl font-bold text-text-primary">
+            <NavLink to="/" className="text-xl font-bold text-text-primary">
               Cozy®
-            </a>
+            </NavLink>
           </div>
           <nav className="hidden space-x-10 md:flex">
             <a href="#" className="nav-link">

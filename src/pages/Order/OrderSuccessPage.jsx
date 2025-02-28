@@ -23,14 +23,14 @@ const OrderSuccessPage = () => {
             <div className="px-4 py-3 mx-auto max-w-7xl sm:px-6 lg:px-8">
             <h2 className=' text-[28px] font-bold mb-4'>Order Information</h2>
 
-            <div className="flex  gap-[70px]">
-            <div className="flex-auto w-[65%] ">
+            <div className="flex md:flex-row sm:flex-col justify-between sm:gap-[10px]  md:gap-[70px]">
+            <div className="flex-auto sm:w-full md:w-[65%] ">
                     <OrderInformation />
                     
                 </div>
 
 
-                <OrderSummary name="Save to Gallery" />
+                <OrderSummary name="Save" />
             </div>
 
 

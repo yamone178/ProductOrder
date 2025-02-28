@@ -19,4 +19,8 @@
     @apply px-4 py-12 mx-auto max-w-7xl sm:px-6 lg:px-8
   }
 
+  .gradient-box{
+    @apply sm:hidden md:block w-[440px] h-[25%] opacity-[10%] absolute bg-gradient-to-r from-transparent to-[#4B8785];
+  }
+
 }

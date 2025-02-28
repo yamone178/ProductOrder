@@ -39,8 +39,9 @@ export const CartProvider = ({children}) => {
     }
 
     useEffect(() => {
-        setTotal(cart.reduce((acc, item) => acc + item.price * item.quantity, 0));
-        setDiscount(Number(total*0.1).toFixed(2));
+        const newTotal = cart.reduce((acc, item) => acc + item.price * item.quantity, 0);
+        setTotal(newTotal);
+        setDiscount(Number(newTotal*0.1).toFixed(1));
     }, [cart]);
 
     return (
