@@ -4,10 +4,11 @@ import { useCart } from '../../context/CartContext'
 import CartItem from '../../components/CartItem'
 import OrderSummary from '../../components/OrderSummary'
 import { AiOutlinePercentage } from 'react-icons/ai'
+import { CartItemType } from '../../type/type'
 
 const Cart = () => {
 
-  const { cart } = useCart()
+  const { cart }= useCart()
 
   return (
     <div>
@@ -21,7 +22,7 @@ const Cart = () => {
 
               <div className="">
                 {
-                  cart.map((item) => (
+                  cart.map((item: CartItemType) => (
                     <CartItem key={item.id} item={item} />
                   ))
                 }

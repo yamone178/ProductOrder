@@ -16,7 +16,7 @@ const CheckOut = () => {
 
     })
 
-    const handleInputChange = (e) => {
+    const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
 
         const { name, value } = e.target
         setFormData((prevState) => ({

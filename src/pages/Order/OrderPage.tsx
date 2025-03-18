@@ -7,9 +7,22 @@ import img3 from '../../assets/img3.png'
 import img4 from '../../assets/img4.png'
 import img5 from '../../assets/img5.png'
 
+
 const OrderPage = () => {
 
-  const product ={
+  type ProductType = {
+    id: number,
+    title: string,
+    price: number,
+    color: string,
+    des: string,
+    rating: number,
+    review: 556,
+    quantity: number,
+    thumbnails: string[]
+  }
+
+  const product : ProductType ={
     id: 1,
     title: "Meryl Lounge Chair",
     price: 149.99, 

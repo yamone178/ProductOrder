@@ -8,6 +8,7 @@ export default defineConfig({
   plugins: [
     react(),
     tailwindcss(),
+    { test: /\\.(png|jp(e*)g|svg|gif)$/, use: ['file-loader'], }
   ],
   
 })

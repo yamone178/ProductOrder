@@ -1,13 +1,18 @@
 import React, { useEffect, useState } from 'react'
-import img from '../../assets/Product Image.png'
+import img from '../../assets/Product_Image.png'
+import { ProductType } from '../../type/type'
 
-const ProductImage = ({product}) => {
+type PropsType = {
+  product : ProductType
+}
 
-  const [currentImg, setCurrentImg] = useState(img)
-  const [currentImgIndex, setCurrentImgIndex] = useState(0)
+const ProductImage = ({product}: PropsType) => {
+
+  const [currentImg, setCurrentImg] = useState<string>(img)
+  const [currentImgIndex, setCurrentImgIndex] = useState<number>(0)
 
 
-  const handleChangeImg = (img, index) => {
+  const handleChangeImg = (img : string, index : number) : void => {
     setCurrentImgIndex(index)
     setCurrentImg(img)
   }
@@ -24,7 +29,7 @@ const ProductImage = ({product}) => {
 
       <div className="grid grid-cols-5 gap-6" >
         
-        {product.thumbnails.map((img,i) => (
+        {product.thumbnails.map((img : string,i: number) => (
           <button
             key={i}
             onClick={() => handleChangeImg(img, i)}

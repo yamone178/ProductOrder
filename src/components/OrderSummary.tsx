@@ -2,20 +2,31 @@ import React, { useEffect } from 'react'
 import { GoTag } from "react-icons/go";
 import { useCart } from '../context/CartContext';
 import { useNavigate } from 'react-router';
+import { PersonalInfoType } from '../type/type';
 
 
-const OrderSummary = ({name, route, formData}) => {
+type PropsType = {
+  name: string | null,
+  route?: string | null,
+  formData?: PersonalInfoType | null
+  
+}
 
-    const {cart, total, discount, addPersonalInfo} = useCart()
+const OrderSummary = ({name, route, formData}: PropsType) => {
+
+    const { total, discount, addPersonalInfo} = useCart()
 
 
     const navigate = useNavigate()
     
-    const handleSubmit = () =>{
-      formData && addPersonalInfo(formData)
-      navigate(route)
+    const handleSubmit = (): void => {
+      if (formData) {
+        addPersonalInfo(formData)
+      }
+      if (route) {
+        navigate(route)
+      }
     }
-    
 
   return (
     
@@ -51,7 +62,7 @@ const OrderSummary = ({name, route, formData}) => {
     
 <div className="flex justify-between ">
   <span>TOTAL</span>
-  <span className='font-semibold '>${(Number(total.toFixed(2) - discount)).toFixed(2)}</span>
+  <span className='font-semibold '>${(total - discount).toFixed(2)}</span>
 
 </div>
 

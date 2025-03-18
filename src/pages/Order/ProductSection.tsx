@@ -8,18 +8,22 @@ import { FaInstagram } from "react-icons/fa";
 import { FaTwitter } from "react-icons/fa";
 import { FaPinterest } from "react-icons/fa";
 import { IoStar } from 'react-icons/io5';
+import { ProductType } from '../../type/type';
 
+type PropsType = {
+  product : ProductType
+}
 
-const ProductSection = ({product}) => {
+const ProductSection = ({product}: PropsType) => {
 
-  const [quantity, setQuantity] = useState(1)
+  const [quantity, setQuantity] = useState<number>(1)
   const { addToCart } = useCart()
 
-  const decrementQuantity = () => { 
+  const decrementQuantity = () : void => { 
     setQuantity((prev) => (prev > 1 ? prev - 1 : prev))
   }
 
-  const incrementQuantity = () => {
+  const incrementQuantity = (): void => {
     setQuantity((prev) => prev + 1) 
   }
 
@@ -40,7 +44,7 @@ const ProductSection = ({product}) => {
         <div className="mt-3">
           <div className="flex items-center">
             <div className="flex items-center">
-              {[0, 1, 2, 3, 4].map((rating) => (
+              {[0, 1, 2, 3, 4].map((rating:number) => (
                 <IoStar
                   key={rating}
                   className={`${rating < 4 ? "text-yellow-400 " : "text-gray-300"} h-5 w-5 flex-shrink-0`}

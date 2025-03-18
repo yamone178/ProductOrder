@@ -30,7 +30,7 @@ const OrderSuccessPage = () => {
                 </div>
 
 
-                <OrderSummary name="Save" />
+                <OrderSummary name="Save"  />
             </div>
 
 
