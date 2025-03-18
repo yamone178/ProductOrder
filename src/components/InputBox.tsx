@@ -1,6 +1,13 @@
 import React from 'react'
 
-const InputBox = ({name, placeholder, value, handleInputChange}) => {
+type PropsType = {
+  name: string,
+  placeholder: string,
+  value: string,
+  handleInputChange: (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => void
+}
+
+const InputBox = ({name, placeholder, value, handleInputChange}: PropsType) => {
   return (
     <input
     type="text"

@@ -2,17 +2,22 @@ import React, { useEffect, useState } from 'react'
 import { AiOutlineMinus, AiOutlinePlus } from 'react-icons/ai'
 import { useCart } from '../context/CartContext'
 
-const QtyCount = ({qty, id}) => {
+type PropsType = {
+  qty: number,
+  id: number
+}
 
-    const [quantity, setQuantity] = useState(qty)
+const QtyCount = ({qty, id}: PropsType) => {
+
+    const [quantity, setQuantity] = useState<number>(qty)
     const {cart} = useCart()
 
     const {updateQty} = useCart()    
-      const decrementQuantity = () => { 
+      const decrementQuantity = () : void => { 
         setQuantity((prev) => (prev > 1 ? prev - 1 : prev))
       }
     
-      const incrementQuantity = () => {
+      const incrementQuantity = () : void => {
         setQuantity((prev) => prev + 1) 
       }
     

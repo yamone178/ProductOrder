@@ -1,6 +1,10 @@
 import React from 'react'
 
-const SuccessMessage = ({message}) => {
+type PropsType = {
+  message: string
+}
+
+const SuccessMessage = ({message}: PropsType) => {
   return (
    
         <div className="w-full py-4 rounded-md px-7 bg-alert_bg text-primary">

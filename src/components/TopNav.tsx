@@ -40,7 +40,7 @@ const TopNav = () => {
           </nav>
           <div className="flex items-center justify-end md:flex-1 lg:w-0">
             <NavLink to="/cart" className="relative ml-8">
-              { cart.length > 0 && <span className="absolute -top-1 -right-1 flex items-center justify-center w-4 h-4 bg-primary text-white text-[10px] rounded-full">
+              { cart && cart.length > 0 && <span className="absolute -top-1 -right-1 flex items-center justify-center w-4 h-4 bg-primary text-white text-[10px] rounded-full">
                 {cart.length}
               </span>}
               <img src={cartImg} alt="Cart" className="w-6 h-6" />

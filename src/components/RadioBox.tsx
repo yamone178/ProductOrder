@@ -1,4 +1,12 @@
-const RadioBox = ({ checked, handleInputChange, name, value, title }) => {
+type PropsType = {
+  checked: boolean,
+    handleInputChange: (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => void
+  name: string,
+  value: string,
+  title: string
+  
+}
+const RadioBox = ({ checked, handleInputChange, name, value, title }: PropsType) => {
   return (
     <label className="flex items-center p-4 border border-gray-200 cursor-pointer">
       <div className="relative flex items-center">
